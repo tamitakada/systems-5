@@ -41,7 +41,7 @@ int main() {
     
     int count = 0;
     while (count < sizeof(ui)) {
-        printf("%hhu", *(((char *) pui_1) + count));
+        printf("%hhu", *((char *) pui_1 + count));
         count++;
     }
     
@@ -49,7 +49,7 @@ int main() {
     
     count = 0;
     while (count < sizeof(ui)) {
-        *(((char *) pui_1) + count) += 1;
+        *((char *) pui_1 + count) += 1;
         printf("Unsigned int: %u\tHex: %x\n", ui, ui);
         count++;
     }
@@ -60,7 +60,7 @@ int main() {
     
     count = 0;
     while (count < sizeof(ui)) {
-        *(((char *) pui_1) + count) += 16;
+        *((char *) pui_1 + count) += 16;
         printf("Unsigned int: %u\tHex: %x\n", ui, ui);
         count++;
     }
